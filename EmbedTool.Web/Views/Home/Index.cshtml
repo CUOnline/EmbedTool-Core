@@ -1,0 +1,13 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/dist/home.js"></script>
+}
+
+<div id="home">
+    <home base-url="@Model.BaseUrl"></home>
+</div>
