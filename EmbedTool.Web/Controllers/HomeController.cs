@@ -40,7 +40,7 @@ namespace EmbedTool.Web.Controllers
 
             doc.GetElementsByTagName("blti:title")[0].InnerText = string.IsNullOrWhiteSpace(title) ? "Embed Tool" : title;
             doc.GetElementsByTagName("blti:launch_url")[0].InnerText = $"{settings.BaseUrl}Home/Config";
-            GetNodeByName(doc.ChildNodes, "url").InnerText = url;
+            GetNodeByName(doc.ChildNodes, "url").InnerText = url + "?embedded=true";
             GetNodeByName(doc.ChildNodes, "domain").InnerText = $"{settings.BaseUrl}";
 
             if (accountNavigation != true)
